@@ -15,9 +15,9 @@ def url_params_to_json():
                        'harmonyOs', 'networkType', 'uts', 'uemps', 'ext', 'eid', 'x-api-eid-token', 'ef', 'ep']
 
     api_jd_url = global_config.getRaw('config', 'api_jd_url')
-    print('api_jd_url',api_jd_url)
+    # print('api_jd_url',api_jd_url)
     tmp_url = urlparse(api_jd_url)
-    print('tmp_url',tmp_url)
+    # print('tmp_url',tmp_url)
     parad = parse_qs(tmp_url.query)
 
     # 获取 URL 中的参数名
@@ -51,7 +51,7 @@ class SpiderSession:
         self.payload = None
         self.uuid = None
         self.local_cookie = global_config.getRaw('config', 'local_cookies')
-        logger.info(self.local_cookie)
+        print('self.local_cookie', self.local_cookie)
         self.local_jec = global_config.getRaw('config', 'local_jec')
         self.local_jeh = global_config.getRaw('config', 'local_jeh')
         self.local_jdgs = global_config.getRaw('config', 'local_jdgs')
