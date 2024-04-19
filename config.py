@@ -8,16 +8,16 @@ class Config(object):
        # Map the environment variable names to the sections and options
        self.config = {
            'config': {
-               'local_cookies': os.getenv('CONFIG_LOCAL_COOKIES'),
-               'local_jec': os.getenv('CONFIG_LOCAL_JEC'),
-               'local_jdgs': os.getenv('CONFIG_LOCAL_JDGS'),
-               'api_jd_url': os.getenv('CONFIG_API_JD_URL'),
+               'local_cookies': os.getenv('LOCAL_COOKIES'),
+               'local_jec': os.getenv('LOCAL_JEC'),
+               'local_jdgs': os.getenv('LOCAL_JDGS'),
+               'api_jd_url': os.getenv('API_JD_URL'),
                'continue_time': 10,
                'work_count': 2,
-               'fp': os.getenv('CONFIG_FP'),
-               'task': [{"name" :"maotai", "sku_id" :"100012043978", "make_reserve_time" :"10:07:00", "buy_time" :"11:59:57",}]
-               'address_id': os.getenv('CONFIG_ADDRESS_ID'),
-               'push_token': os.getenv('CONFIG_PUSH_TOKEN'),
+               'fp': os.getenv('FP'),
+               'task': [{"name" :"maotai", "sku_id" :"100012043978", "make_reserve_time" :"10:07:00", "buy_time" :"11:59:57",}],
+               'address_id': os.getenv('ADDRESS_ID'),
+               'push_token': os.getenv('PUSH_TOKEN'),
            }
        }
  
