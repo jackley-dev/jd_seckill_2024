@@ -30,7 +30,7 @@ jobs:
    - name: Execute main.py
      env:
        # You can set environment variables directly here
-       local_cookies: ${{ secrets.LOCAL_COOKIES }}
+       LOCAL_COOKIES: ${{ secrets.LOCAL_COOKIES }}
        local_jec: ${{ secrets.LOCAL_JEC }}
        local_jdgs: ${{ secrets.LOCAL_JDGS }}
        api_jd_url: ${{ secrets.API_JD_URL }}
