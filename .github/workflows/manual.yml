@@ -31,11 +31,11 @@ jobs:
      env:
        # You can set environment variables directly here
        LOCAL_COOKIES: ${{ secrets.LOCAL_COOKIES }}
-       local_jec: ${{ secrets.LOCAL_JEC }}
-       local_jdgs: ${{ secrets.LOCAL_JDGS }}
-       api_jd_url: ${{ secrets.API_JD_URL }}
-       fp: ${{ secrets.FP }}
-       address_id: ${{ secrets.ADDRESS_ID }}
-       push_token: ${{ secrets.PUSH_TOKEN }}
+       LOCAL_JEC: ${{ secrets.LOCAL_JEC }}
+       LOCAL_JDGS: ${{ secrets.LOCAL_JDGS }}
+       API_JD_URL: ${{ secrets.API_JD_URL }}
+       FP: ${{ secrets.FP }}
+       ADDRESS_ID: ${{ secrets.ADDRESS_ID }}
+       PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
      run: |
        python main.py
