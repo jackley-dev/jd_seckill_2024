@@ -28,8 +28,6 @@ jobs:
        pip install -r requirements.txt
  
    - name: Execute main.py
-     run: |
-       python main.py
      env:
        # You can set environment variables directly here
        local_cookies: ${{ secrets.LOCAL_COOKIES }}
@@ -39,3 +37,5 @@ jobs:
        fp: ${{ secrets.FP }}
        address_id: ${{ secrets.ADDRESS_ID }}
        push_token: ${{ secrets.PUSH_TOKEN }}
+     run: |
+       python main.py
