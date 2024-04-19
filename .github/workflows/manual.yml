@@ -1,0 +1,41 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+
+env:
+  TZ: Asia/Shanghai
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+ run-python-script:
+   runs-on: ubuntu-latest  # Specifies the virtual environment to run the jobs
+ 
+   steps:
+   - uses: actions/checkout@v3  # Checks out the repository
+ 
+   - name: Set up Python 3.x
+     uses: actions/setup-python@v4
+     with:
+       python-version: '3.x'  # Specify the Python version you want to use
+ 
+   - name: Install dependencies
+     run: |
+       pip install -r requirements.txt
+ 
+   - name: Execute main.py
+     run: |
+       python main.py
+     env:
+       # You can set environment variables directly here
+       local_cookies: ${{ secrets.local_cookies }}
+       local_jec: ${{ secrets.local_jec }}
+       local_jdgs: ${{ secrets.local_jdgs }}
+       api_jd_url: ${{ secrets.api_jd_url }}
+       fp: ${{ secrets.fp }}
+       address_id: ${{ secrets.address_id }}
+       PUSHPLUS_KEY: ${{ secrets.PUSHPLUS_KEY }}
