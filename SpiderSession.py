@@ -51,6 +51,7 @@ class SpiderSession:
         self.payload = None
         self.uuid = None
         self.local_cookie = global_config.getRaw('config', 'local_cookies')
+        logger.info(self.local_cookie)
         self.local_jec = global_config.getRaw('config', 'local_jec')
         self.local_jeh = global_config.getRaw('config', 'local_jeh')
         self.local_jdgs = global_config.getRaw('config', 'local_jdgs')
