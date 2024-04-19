@@ -51,7 +51,8 @@ class SpiderSession:
         self.payload = None
         self.uuid = None
         self.local_cookie = global_config.getRaw('config', 'local_cookies')
-        print('self.local_cookie', self.local_cookie)
+        logger.info('self.local_cookie')
+        logger.info(self.local_cookie)
         self.local_jec = global_config.getRaw('config', 'local_jec')
         self.local_jeh = global_config.getRaw('config', 'local_jeh')
         self.local_jdgs = global_config.getRaw('config', 'local_jdgs')
@@ -126,6 +127,8 @@ class SpiderSession:
 
     def init_cookies(self):
         cookie_jar = requests.cookies.RequestsCookieJar()
+        logger.info('self.local_cookie.128')
+        logger.info(self.local_cookie)
         for cookie in self.local_cookie.split(';'):
             cookie_jar.set(cookie.split('=')[0], cookie.split('=')[-1])
         return cookie_jar
