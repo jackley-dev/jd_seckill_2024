@@ -15,7 +15,7 @@ class Config(object):
                'continue_time': 10,
                'work_count': 2,
                'fp': os.environ.get('FP'),
-               'task': [{"name" :"maotai", "sku_id" :"100012043978", "make_reserve_time" :"10:07:00", "buy_time" :"11:59:57",}],
+               'task': '[{"name" :"maotai", "sku_id" :"100012043978", "make_reserve_time" :"10:07:00", "buy_time" :"11:59:57",}]',
                'address_id': os.environ.get('ADDRESS_ID'),
                'push_token': os.environ.get('PUSH_TOKEN'),
            }
