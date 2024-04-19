@@ -32,10 +32,10 @@ jobs:
        python main.py
      env:
        # You can set environment variables directly here
-       local_cookies: ${{ secrets.local_cookies }}
-       local_jec: ${{ secrets.local_jec }}
-       local_jdgs: ${{ secrets.local_jdgs }}
-       api_jd_url: ${{ secrets.api_jd_url }}
-       fp: ${{ secrets.fp }}
-       address_id: ${{ secrets.address_id }}
-       PUSHPLUS_KEY: ${{ secrets.PUSHPLUS_KEY }}
+       local_cookies: ${{ secrets.LOCAL_COOKIES }}
+       local_jec: ${{ secrets.LOCAL_JEC }}
+       local_jdgs: ${{ secrets.LOCAL_JDGS }}
+       api_jd_url: ${{ secrets.API_JD_URL }}
+       fp: ${{ secrets.FP }}
+       address_id: ${{ secrets.ADDRESS_ID }}
+       push_token: ${{ secrets.PUSH_TOKEN }}
