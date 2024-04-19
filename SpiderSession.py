@@ -15,7 +15,9 @@ def url_params_to_json():
                        'harmonyOs', 'networkType', 'uts', 'uemps', 'ext', 'eid', 'x-api-eid-token', 'ef', 'ep']
 
     api_jd_url = global_config.getRaw('config', 'api_jd_url')
+    logger.info('api_jd_url',str(api_jd_url))
     tmp_url = urlparse(api_jd_url)
+    logger.info(tmp_url)
     parad = parse_qs(tmp_url.query)
 
     # 获取 URL 中的参数名
