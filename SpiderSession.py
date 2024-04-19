@@ -15,8 +15,8 @@ def url_params_to_json():
                        'harmonyOs', 'networkType', 'uts', 'uemps', 'ext', 'eid', 'x-api-eid-token', 'ef', 'ep']
 
     api_jd_url = global_config.getRaw('config', 'api_jd_url')
-    logger.info('global_config')
-    logger.info(global_config)
+    logger.info('api_jd_url')
+    logger.info(api_jd_url)
     # print('api_jd_url',api_jd_url)
     tmp_url = urlparse(api_jd_url)
     # print('tmp_url',tmp_url)
